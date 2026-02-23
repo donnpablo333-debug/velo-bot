@@ -185,6 +185,10 @@ async def process_search(message: Message, state: FSMContext):
 
 # ---------------- ЗАПУСК ----------------
 
+@dp.message()
+async def debug(message: Message):
+    print(message.chat.id)
+
 async def main():
     await dp.start_polling(bot)
 
